@@ -29,7 +29,7 @@ table {
     font-style: normal;
     color: -internal-quirk-inherit;
     text-align: start;
-    font-variant: normal;1
+    font-variant: normal;
 }
 table {
     display: table;
@@ -42,12 +42,12 @@ tr {
     vertical-align: inherit;
     border-color: inherit;
 }
+
 td {
     font: 10px/15px Verdana, Arial, Helvetica, sans-serif;
     color: #000;
     margin: 0;
     text-align: -webkit-center;
-    height: 100%;
     display: table-cell;
     vertical-align: inherit;
 }
