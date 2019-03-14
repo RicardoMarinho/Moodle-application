@@ -55,3 +55,7 @@ td {
     margin-top: 5%;
 
 }
+::placeholder {
+    
+    color: #cccccc;
+}
