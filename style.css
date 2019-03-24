@@ -1,64 +1,33 @@
+header {
+    padding: 25px;
+    text-align: center;
+    background: #83A3DB;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  
+  .menuindex {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+  .menuindexsubmeter {
+    width: 20%;
+    background-color: #83A3DB;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
 body {
-    font: 10px/15px Verdana, Arial, Helvetica, sans-serif;
-    background-color: #FFFFFF;
-    margin: 0;
-}
-tbody {
-    display: table-row-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-.main_table{
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    width: 640px;
-    height: 400px;
-    background-image: url(istec.png);
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    -webkit-border-horizontal-spacing: 0px;
-    -webkit-border-vertical-spacing: 0px;
-}
-table {
-    white-space: normal;
-    line-height: normal;
-    font-weight: normal;
-    font-size: medium;
-    font-style: normal;
-    color: -internal-quirk-inherit;
-    text-align: start;
-    font-variant: normal;
-}
-table {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 2px;
-    border-color: grey;
-}
-tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-}
-
-td {
-    font: 10px/15px Verdana, Arial, Helvetica, sans-serif;
-    color: #000;
-    margin: 0;
-    text-align: -webkit-center;
-    display: table-cell;
-    vertical-align: inherit;
-}
-.login {
-    margin-top: 5%;
-
-}
-::placeholder {
-    
-    color: #cccccc;
-}
-.certified {
-    height: 35%;
+    text-align: center;
 }
