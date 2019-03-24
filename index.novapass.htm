@@ -5,25 +5,34 @@
     <meta charset="utf-8">
     <meta name="author" content="Ricardo Braz e Pedro Gomes" />
     <link rel="shortcut icon" type="image/png" href="simbolologin.png"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
 	<title>Recuperacao</title>
 </head>
 
-<header>
-    <h1>Benvindo ao <img src="m.png"/>oddle</h1>
-    <h2>Sentimos a tua falta.</h2>
-</header>
-
 <body>
-    <form classe="menulogin"  action="/action_page.php">
-        <br>
-        <p><img src="simbolologin.png" title="Benvindo"></p>
-        <strong>Introduza o seu email válido para <br> enviarmos a palavra passe. </strong><br>
-        <input type="email" id="fname" class="menuindex" name="email" placeholder="email"> <br>
-        <input type="submit" class="menuindexsubmeter" value="Submit"><br>                 
-        <a href="paginaRecuperacao">Não sabe o email válido, contacte-nos?</a> 
-    </form> 
+    <nav class="barra">
+        <p class="Benvindo">Benvindo ao <img src="images/m.png"/>oddle</p>
+        <h3 style="color: #fff; font-size: 20px; padding-bottom: 10px;">Sentimos a tua falta.</h3>
+    </nav>
+
+    <section class="Login">
+            <section class="Form">
+                <form classe="menulogin"  action="/action_page.php">
+                    <br>
+                    <p><img src="images/simbolologin.png" title="Benvindo"></p>
+                    <strong>Introduza o seu email válido para <br> enviarmos a palavra passe. </strong><br>
+                    <input type="email" id="fname" class="menuindex" name="email" placeholder="email"> <br>
+                    <input type="submit" class="menuindexsubmeter" value="Submit"><br>  
+                    <a class="esqueceu" href="paginaRecuperacao">Não sabe o email válido, contacte-nos?</a>                              
+                </form>
+            </section>
+        </section>
+        <footer>
+            <section class="copy">
+                <span>Copyright &copy; 2019 | Developed by Pedro Gomes & Ricado Braz</span>
+            </section>
+        </footer>    
 </body>
 
 </html>
