@@ -3,10 +3,23 @@ html, body {
   height: 100%;
 }
 .barra {
-    margin: 0 auto;
-    text-align: center;
     background: #83A3DB;
     width: 100%;
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .barra_principal {
+    background: #83A3DB;
+    float: right;
+    width: 80%;
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    text-align: center;
+    
   }
   
   body{
@@ -14,6 +27,19 @@ html, body {
     background: #f2f2f2;
     margin: 0;
     
+  }
+
+
+  .nav {
+    background-color: #000052;
+  }
+
+  .nome {
+    font-family: "Roboto", sans-serif;
+    font-size: 12pt;
+    color: white;
+    float: right;
+    width: 50%;
   }
   
   .Benvindo {
@@ -24,6 +50,7 @@ html, body {
     margin: 0;
   }
   .menuindex {
+    font-family: "Roboto", sans-serif;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -43,13 +70,34 @@ html, body {
     border-radius: 4px;
     cursor: pointer;
   }
+  .sidebar{
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-color: #83A3DB;
+    position: relative;
+    overflow: auto;
+   
+  }
+
+  .perfil {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 94%;
+    align-items: center;
+  }
 
   .Login {
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  .main{
+    width: 85%;
+    overflow: hidden;
   }
 
   .Form {
@@ -87,5 +135,41 @@ html, body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #a6a6a6;
+    position: relative;
+    width: 40%;
+    margin: auto;
 
   }
+
+  .texto{
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+    color: white;
+  }
+
+  .sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li a{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebarMenuInner li:hover {
+  opacity: 0.6;
+}
