@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ricardo Braz e Pedro Gomes" />
+    <link rel="shortcut icon" type="image/png" href="image/simbolologin.png"/>
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Contacto</title>
+</head>
+
+<body>
+  
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+      <div class="w3-bar-padd">
+      <a href="#" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-book fa-fw" aria-hidden="true"></i>As minhas disciplinas</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
+      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-graduation-cap fa-fw" aria-hidden="true"></i>Os meus ficheiros</a>
+    </div>
+    </div>
+  
+              <div id="main">
+              
+              <div class="fixed-top navbar navbar-expand">
+                <button id="openNav"  onclick="w3_open()">&#9776;</button>
+                <div role="button" tabindex="0"><i class="icon fa fa-search fa-fw " title="Search" aria-label="Search"></i></div>
+                <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item d-flex align-items-center"><span class="texto">Ricardo Braz</span></li>
+                  <li class="nav-item d-flex align-items-center"><span class="avatar current"><img src="images/perfilricardo.png" class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
+                </ul>
+              </div>
+              
+              
+              
+              <div class="w3-container">
+              <p>In this example, the sidebar is hidden (style="display:none")</p>
+              <p>It is shown when you click on the menu icon in the top left corner.</p>
+              <p>When it is opened, it shifts the page content to the right.</p>
+              <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
+              </div>
+              
+              </div>
+              
+              <script>
+              function w3_open() {
+                var x = document.getElementById("mySidebar");
+                if(x.style.display === "none")
+                {
+                    document.getElementById("main").style.marginLeft = "15%";
+                    x.style.width = "15%";
+                    x.style.display = "block";
+                    
+                }
+                else {
+                    document.getElementById("main").style.marginLeft = "0%";
+                    x.style.display = "none";
+                    document.getElementById("openNav").style.display = "inline-block";
+                }
+                
+               
+              }
+              
+              </script>
+              <script src="https://use.fontawesome.com/00df0b3ac0.js"></script>
+</body>
+
+</html>
