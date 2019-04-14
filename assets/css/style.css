@@ -167,3 +167,57 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 
 /*Coluna direita do conteudo central*/
 [data-region="blocks-column"] {width: 360px;float: right;}
+
+/*dashboar formulario de dados*/
+.dadosform{
+  border-radius: 10px;
+  background-color:#FFFFFF;
+  top: 100px;
+  padding: 20px;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;   
+  margin: 0 auto 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  }
+
+  input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.navbarform {
+  top: 100px;
+  position: relative;
+  max-width: 800px;   
+  margin: 0 auto 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow: hidden;
+  background-color: #83A3DB;
+}
+
+.navbarform a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbarform a:hover {
+  background: #ddd;
+  color: black;
+}
