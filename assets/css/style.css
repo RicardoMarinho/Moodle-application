@@ -1,30 +1,38 @@
 html, body {width: 100%;height: 100%;}
-body{font-family: "Roboto", sans-serif;background: #f2f2f2;margin: 0;}
+body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background: #f2f2f2;margin: 0;letter-spacing: .3px;}
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+ol, ul, dl {margin-top: 0;margin-bottom: 1rem;}
+button, input {overflow: visible;}
+.form-control {display: block;width: 100%;padding: .375rem .75rem;font-size: .9375rem;line-height: 1.5;color: #495057;background-color: #fff;-webkit-background-clip: padding-box;
+  background-clip: padding-box;border: 1px solid #ced4da;border-radius: 0;-webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -o-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
 
 .barra {background: #83A3DB;width: 100%;overflow: hidden;padding-top: 4px;padding-bottom: 10px;text-align: center;}
-.nome {font-family: "Roboto", sans-serif;font-size: 12pt;color: white;float: right;width: 50%;}
-.Benvindo {font-family: "Roboto", sans-serif;padding-top: 10px;color: white;font-size: 2em;margin: 0;}
-.menuindex {font-family: "Roboto", sans-serif;width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
+.nome {font-size: 12pt;color: white;float: right;width: 50%;}
+.Benvindo {padding-top: 10px;color: white;font-size: 2em;margin: 0;}
+.menuindex {width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
 .menuindexsubmeter {width: 100%;background-color: #83A3DB;color: white;padding: 15px 20px;margin: 8px 0;border: none;border-radius: 4px;cursor: pointer;}
 .Login {height: 85vh;display: flex;flex-direction: row;justify-content: center;align-items: center;}
 .main{width: 85%;overflow: hidden;}
 .Form {position: relative;z-index: 1;background: #FFFFFF;max-width: 300px;margin: 0 auto 100px;padding-top: 20px;
     padding-bottom: 20px;padding-left: 100px;padding-right: 100px;border-top-left-radius: 3px;border-top-right-radius: 3px;
     border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;text-align: center;}
-.esqueceu {font-family: "Roboto", sans-serif;font-size: 12px;color: #ccc;text-decoration: none;}
+.esqueceu {font-size: 12px;color: #ccc;text-decoration: none;}
 .esqueceu :visited{text-decoration: none;color: #ccc;}
 
 /*Footer*/
-.copy{display: flex;justify-content: center;font-family: "Roboto", sans-serif;font-size: 14px;color: #a6a6a6;position: relative;width: 40%;margin: auto;}
+.copy{display: flex;justify-content: center;font-size: 14px;color: #a6a6a6;position: relative;width: 40%;margin: auto;}
 
 /*Barra de topo*/
-.texto{font-family: "Roboto", sans-serif;font-size: 10pt;color: white;}
+.texto{font-size: 10pt;color: white;}
 .fixed-top{position: fixed;top: 0;right: 0;left: 0;z-index: 1030;}
 .navbar-expand {flex-flow: row nowrap;justify-content: flex-start;}
 .navbar{display: flex;align-items: center;justify-content: space-between;padding: .5rem 1rem;flex-wrap: wrap;
   background: #83A3DB;width: 100%;overflow: hidden;padding-top: 4px;padding-bottom: 10px;text-align: center;}
 .navbar-nav{display: flex;flex-direction: column;padding-left: 0;margin-bottom: 0;list-style: none;}
 .nav {flex-direction: row;}
+.nav-link {display: block;padding: .5rem 1rem;}
 
 /*Foto de perfil*/
 .userpicture {border-radius: 50%;}
@@ -38,17 +46,66 @@ body{font-family: "Roboto", sans-serif;background: #f2f2f2;margin: 0;}
 
 *, *::before, *::after {-webkit-box-sizing: border-box;box-sizing: border-box;}
 
+/*Regras !important*/
 .search-input-wrapper>div {float: left;margin: 0;}
 .d-flex {display: flex!important;}
 .ml-auto, .mx-auto {margin-left: auto!important;}
+.mr-3 {margin-right: 1rem!important;}
+.mr-1 {margin-right: .25rem!important;}
+.d-inline-block {display: inline-block!important;}
+.align-items-center {align-items: center!important;}
 
-ol, ul, dl {margin-top: 0;margin-bottom: 1rem;}
+
+/*Botão para abrir/fechar barra lateral*/
+[data-action=toggle-drawer] .icon {margin: 0;}
+.btn-light {color: #212529;background-color: #f8f9fa;border-color: #f8f9fa;}
+.btn, #page-grade-grading-manage .actions .action, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input, #rubric-rubric.gradingform_rubric .addcriterion {
+  display: inline-block;font-weight: 400;text-align: center;white-space: nowrap;vertical-align: middle;-webkit-user-select: none;-moz-user-select: none;
+  -ms-user-select: none;user-select: none;border: 1px solid transparent;padding: .375rem .75rem;font-size: .9375rem;line-height: 1.5;border-radius: 0;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+.bg-gray {background-color: #e9ecef!important;}
+.sr-only {position: absolute;width: 1px;height: 1px;padding: 0;overflow: hidden;clip: rect(0,0,0,0);white-space: nowrap;clip-path: inset(50%);border: 0;}
+
+/*Nome do instituto do moodle*/
+.navbar-light .navbar-brand, .navbar-brand:visited, .link-vis {color: rgba(0,0,0,.9);}
+.navbar-brand {text-decoration: none;display: inline-block;padding-top: .32421875rem;padding-bottom: .32421875rem;margin-right: 1rem;font-size: 1.171875rem;line-height: inherit;white-space: nowrap;}
+.d-none {display: none!important;}
+
+/*Nome do user*/
+.username{color: rgba(0,0,0,.9); margin: 0 1rem 0 0;font-size: 10pt}
+
+
+/*Barra tradução*/
+.navbar-expand .navbar-nav {flex-direction: row;}
+.navbar-nav {display: flex;flex-direction: column;padding-left: 0;margin-bottom: 0;list-style: none;}
+.navbar-light .navbar-nav .nav-link {color: rgba(0,0,0,.5);}
+.navbar-expand .navbar-nav .nav-link {padding-right: .5rem;padding-left: .5rem;}
+.navbar-expand .navbar-nav .dropdown-menu {position: absolute;float: none;}
+.navbar.fixed-top .dropdown .dropdown-menu {max-height: calc(100vh - 50px);overflow-y: auto;}
+.dropdown-item, .dropdown-item:visited, .dropdown-item:hover{display: block;width: 100%;padding: .25rem 1.5rem;clear: both;font-weight: 400;color: #212529;text-align: inherit;white-space: nowrap;background-color: transparent;border: 0;}
+.dropdown-toggle::after{display: inline-block;width: 0;height: 0;margin-left: .255em;vertical-align: .255em;content: "";border-top: .3em solid;border-right: .3em solid transparent;border-bottom: 0;border-left: .3em solid transparent;}
+.dropdown-menu.show {display: block;}
+.dropdown-menu {position: absolute;top: 100%;left: 0;z-index: 1000;display: none;float: left;min-width: 10rem;padding: .5rem 0;margin: .125rem 0 0;font-size: .9375rem;color: #336;text-align: left;list-style: none;background-color: #fff;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid rgba(0,0,0,.15);}
+.flag-usa {background: url('../../images/us.png');background-size: cover;background-position: center center;}
+.flag-pt {background-size: cover;background-position: center center;background: url('../../images/pt.png');}
+
+/*Barra de pesquisa*/
+
+.search-input-wrapper {margin: 0 1rem 0 0;overflow: hidden;float: right;width: 300px;-webkit-transition: width .5s ease,left .5s ease;-o-transition: width .5s ease,left .5s ease;transition: width .5s ease,left .5s ease;}
+.search-input-wrapper>form>input {margin: 0;}
+
+
 /*Viewport, ajuste da página conforme o tamanho da janela*/
-@media (min-width: 768px){.d-md-inline {display: inline!important;}
+@media (min-width: 768px){.d-md-inline {display: inline!important;}}
 @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
 @media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.w3-sidebar.w3-collapse{display:block!important}}
 @media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
 @media (max-width:992px){.w3-sidebar.w3-collapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}.w3-auto{max-width:100%}}
+@media (min-width: 576px){.float-sm-left {float: left!important;}}
+@media (min-width: 576px){.d-sm-inline {display: inline!important;}}
+@media (min-width: 768px){.d-md-inline {display: inline!important;}}
+@media (min-width: 992px){.d-lg-block {display: block!important;}}
 
 /*Barra Lateral*/
 
