@@ -13,6 +13,53 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Dashboard</title>
 </head>
+<style>
+
+/*dashboar formulario de dados*/
+.dadosform{
+  border-radius: 10px;
+  background-color:#FFFFFF;
+  top: 85px;
+  padding: 20px;
+  flex-direction: row;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;   
+  margin: 0 auto 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  }
+
+.navbarform {
+  top: 75px;
+  position: relative;
+  max-width: 800px;   
+  margin: 0 auto 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow: hidden;
+  background-color: #83A3DB;
+}
+
+.navbarform a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbarform a:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
 
 <body>
   
@@ -70,12 +117,15 @@
                 </form>
                 <form class="dadosform" id="meusDados" style="display:block;">
 
-                  <img class="minhafoto" src="images/perfilricardo.png" height="200" alt="Image preview..."><br><br>
+                  <img class="minhafoto" src="images/perfilricardo.png" height="150" width="130" alt="Image preview..."><br><br>
                   <input type="file" onchange="seletorDeImagem()"><br><br>         
 
                   <label for="fname">Nome</label><br>
                   <input type="text" id="nome" style="width:755px; background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
               
+                  <label for="lname">Data de Nascimento</label><br>
+                  <input type="text" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
+               
                   <label for="lname">Morada</label><br>
                   <input type="text" id="endereco" style="width:755px; background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
             
@@ -84,17 +134,16 @@
                   
                   <input type="text" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
                 </form>
+
                 <form class="dadosform" id="useremail" style="display:none;">
                     <label for="fname">Username</label><br>
                     <input type="text" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
                 
-                    <label for="lname">Data de Nascimento</label><br>
-                    <input type="date" id="endereco" style="width:150px; background-color: #EFF2FB" name="lastname" placeholder="01/01/1900"><br>       
-                </form>
+                     </form>
               </form>
               <form class="dadosform" id="meusinteresses" style="display:none;">
                   <label for="fname">A defenir</label><br>
-                  <input type="text" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A defenir.."><br>
+                  <input type="text" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A defenir.."> <br>
               
               </form>
 
