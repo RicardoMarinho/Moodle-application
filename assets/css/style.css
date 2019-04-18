@@ -64,6 +64,7 @@ button, input {overflow: visible;}
 .flex-wrap {flex-wrap: wrap!important;}
 .pb-3, .py-3 {padding-bottom: 1rem!important;}
 .pt-3, .py-3 {padding-top: 1rem!important;}
+.justify-content-start {justify-content: flex-start!important;}
 
 
 /*Botão para abrir/fechar barra lateral*/
@@ -167,3 +168,7 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 
 /*Coluna direita do conteudo central*/
 [data-region="blocks-column"] {width: 360px;float: right;}
+
+/*Timeline*/
+.no-gutters {margin-right: 0;margin-left: 0;}
+.no-gutters>[class*="col-"] {padding-right: 0;padding-left: 0;}
