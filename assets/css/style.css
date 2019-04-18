@@ -169,6 +169,17 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 /*Coluna direita do conteudo central*/
 [data-region="blocks-column"] {width: 360px;float: right;}
 
+<<<<<<< HEAD
 /*Timeline*/
 .no-gutters {margin-right: 0;margin-left: 0;}
 .no-gutters>[class*="col-"] {padding-right: 0;padding-left: 0;}
+=======
+input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+>>>>>>> 2bd834aa5f5a2e318d50a4f2016b9fca17e066b3
