@@ -169,7 +169,6 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 /*Coluna direita do conteudo central*/
 [data-region="blocks-column"] {width: 360px;float: right;}
 
-<<<<<<< HEAD
 /*Timeline*/
 .no-gutters {margin-right: 0;margin-left: 0;}
 .no-gutters>[class*="col-"] {padding-right: 0;padding-left: 0;}
