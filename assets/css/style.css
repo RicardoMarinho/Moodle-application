@@ -74,8 +74,10 @@ button, input {overflow: visible;}
 .pr-1, .px-1 {padding-right: .25rem!important;}
 .justify-content-start {justify-content: flex-start!important;}
 .justify-content-end {justify-content: flex-end!important;}
-
-
+.border-0 {border: 0!important;}
+.bg-gray {background-color: #e9ecef!important;}
+.bg-white {background-color: #fff!important;}
+.border, .filemanager-container, .filepicker-filelist {border: 1px solid #dee2e6!important;}
 /*Botão para abrir/fechar barra lateral*/
 [data-action=toggle-drawer] .icon {margin: 0;}
 .btn-light {color: #212529;background-color: #f8f9fa;border-color: #f8f9fa;}
@@ -84,7 +86,6 @@ button, input {overflow: visible;}
   -ms-user-select: none;user-select: none;border: 1px solid transparent;padding: .375rem .75rem;font-size: .9375rem;line-height: 1.5;border-radius: 0;
   -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;-o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
-.bg-gray {background-color: #e9ecef!important;}
 .sr-only {position: absolute;width: 1px;height: 1px;padding: 0;overflow: hidden;clip: rect(0,0,0,0);white-space: nowrap;clip-path: inset(50%);border: 0;}
 
 /*Nome do instituto do moodle*/
@@ -187,6 +188,13 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 .card-img {width: 100%;}
 .dashboard-card-deck .dashboard-card {margin-bottom: 1.5rem;margin-right:1.5rem;flex-basis: auto;flex-grow: 0;flex-shrink: 0; width: 30%}
 .block .block-cards .icon {margin-right: 0;}
+.dashboard-card-deck .dashboard-card .dashboard-card-footer {padding-top: .8rem;}
+.block .block-cards .progress {height: .5rem;}
+.progress {display: flex;height: 1rem;overflow: hidden;font-size: .703125rem;background-color: #e9ecef;}
+.progress-bar {display: flex;flex-direction: column;justify-content: center;color: #fff;text-align: center;background-color: #1177d1;-webkit-transition: width .6s ease;-o-transition: width .6s ease;transition: width .6s ease;}
+
+/*Texto barra progresso*/
+.small{font-size: 80%;font-weight: 400;}
 
 /*Botões*/
 .btn {display: inline-block;font-weight: 400;text-align: center;white-space: nowrap;vertical-align: middle;user-select: none;border: 1px solid transparent;padding: .375rem .75rem;font-size: .9375rem;line-height: 1.5;border-radius: 0;}
