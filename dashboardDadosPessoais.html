@@ -47,8 +47,9 @@
     color: black;
   }
   
-  input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
+  .boxform, select {padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
   
+
   </style>
 <body>
   
@@ -100,7 +101,7 @@
                       <div class="card-body p-3">
                         <form class="navbarform">    
                           <a onclick="mostraDados()" class="w3-bar-item w3-button"><i class="fas fa-address-book" aria-hidden="true"></i>  Os meus dados  </a>
-                          <a onclick="mostraEmail()" class="w3-bar-item w3-button"><i class="fas fa-at" aria-hidden="true"></i> E-mail </a>
+                          <a onclick="mostraEmail()" class="w3-bar-item w3-button"><i class="fas fa-at" aria-hidden="true"></i> Dados Login </a>
                           <a onclick="mostraInteresses()" class="w3-bar-item w3-button"><i class="fas fa-heartbeat" aria-hidden="true"></i>  Interesses  </a>
                         </form>
 
@@ -110,29 +111,37 @@
                           <input type="file" onchange="seletorDeImagem()"><br><br>         
         
                           <label for="fname">Nome</label><br>
-                          <input type="textform" id="nome" class="large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
+                          <input type="textform" id="nome" class="boxform large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
                       
                           <label for="lname">Data de Nascimento</label><br>
-                          <input type="textform" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
+                          <input type="date" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
                       
                           <label for="lname">Morada</label><br>
-                          <input type="textform" id="endereco" class="large" style="background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
+                          <input type="textform" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
                     
                           <label for="lname">Codigo Postal</label><br>
-                          <input type="textform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
+                          <input type="textform" class="boxform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
                           
-                          <input type="textform" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
+                          <input type="textform" class="boxform" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
                         </form>
         
-                        <form class="dadosform" id="useremail" style="display:none;">
-                            <label for="fname">Username</label><br>
-                            <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
+                        <form action="/action_page.php" class="dadosform" id="useremail" style="display:none;">
+                          <label for="fname">Username</label><br>
+                          <input type="textform" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="username" placeholder="Username.."><br><br>
+
+                          <label for="fname">Palavra Passe</label><br>
+                          <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="username" placeholder="Password.."><br><br>
+
+                          <label for="fname">Endereço Electónico</label><br>
+                          <input type="email" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="Emailadress" placeholder="Email.."><br><br>
                         
-                            </form>
+                          <input type="submit">
+
                         </form>
-                        <form class="dadosform" id="meusinteresses" style="display:none;">
+
+                        <form class="dadosform"  class="boxform"id="meusinteresses" style="display:none;">
                           <label for="fname">A definir</label><br>
-                          <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
+                          <input type="textform" class="boxform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
                         </form>    
                       </div>
                     </section>
