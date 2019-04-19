@@ -13,64 +13,49 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Dashboard</title>
 </head>
+
 <style>
 
-/*dashboar formulario de dados*/
-.dadosform{
-  border-radius: 10px;
-  background-color:#FFFFFF;
-  top: 85px;
-  padding: 20px;
-  flex-direction: row;
-  position: relative;
-  z-index: 1;
-  max-width: 800px;   
-  margin: 0 auto 20px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  /*dashboar formulario de dados*/
+
+  .navbarform {
+    top: 5px;
+    position: relative;
+    max-width: 100%;   
+    margin: 0 auto 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+    background-color: #83A3DB;
   }
-
-.navbarform {
-  top: 75px;
-  position: relative;
-  max-width: 800px;   
-  margin: 0 auto 15px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  overflow: hidden;
-  background-color: #83A3DB;
-}
-
-.navbarform a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 12px 25px;
-  width: 266.5px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.navbarform a:hover {
-  background: #ddd;
-  color: black;
-}
-
-input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
-
-</style>
-
+  
+  .navbarform a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 25px;
+    width: 33.3%;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .navbarform a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
+  
+  </style>
 <body>
   
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
       <div class="w3-bar-padd">
-        <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
-        <a href="#" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
+        <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
+        <a href="dashboardDadosPessoais.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
@@ -94,8 +79,7 @@ input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-b
                           <ul class="dropdown-menu show">
                             <li><a href="#" class="dropdown-item"><i class="sl-flag flag-pt"></i><span class="active">Português</span></a></li>
                             <li><a href="#" class="dropdown-item"><i class="sl-flag flag-usa"></i><span>English</span></a></li>
-                          </ul>  
-                        
+                          </ul> 
                       </div>
                 <ul class="nav navbar-nav ml-auto align-items-center">
                     <div class="d-none d-lg-block">
@@ -110,48 +94,73 @@ input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-b
                   <li class="d-flex align-items-center"><span class="avatar current"><img src="images/perfilricardo.png" class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
                 </ul>
               </div>
-              
+                <div id="region-main-box" class="col-12">
+                  <section id="region-maindados" class="has-blocks mb-3 ml-dados">
+                    <section class="block block_myoverview  card mb-3">
+                      <div class="card-body p-3">
+                        <form class="navbarform">    
+                          <a onclick="mostraDados()" class="w3-bar-item w3-button"><i class="fas fa-address-book" aria-hidden="true"></i>  Os meus dados  </a>
+                          <a onclick="mostraEmail()" class="w3-bar-item w3-button"><i class="fas fa-at" aria-hidden="true"></i> E-mail </a>
+                          <a onclick="mostraInteresses()" class="w3-bar-item w3-button"><i class="fas fa-heartbeat" aria-hidden="true"></i>  Interesses  </a>
+                        </form>
+
+                        <form class="dadosform" id="meusDados" style="display:block;">
+
+                          <img class="minhafoto" src="images/perfilricardo.png" height="150" width="130" alt="Image preview...">
+                          <input type="file" onchange="seletorDeImagem()"><br><br>         
+        
+                          <label for="fname">Nome</label><br>
+                          <input type="textform" id="nome" class="large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
+                      
+                          <label for="lname">Data de Nascimento</label><br>
+                          <input type="textform" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
+                      
+                          <label for="lname">Morada</label><br>
+                          <input type="textform" id="endereco" class="large" style="background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
+                    
+                          <label for="lname">Codigo Postal</label><br>
+                          <input type="textform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
+                          
+                          <input type="textform" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
+                        </form>
+        
+                        <form class="dadosform" id="useremail" style="display:none;">
+                            <label for="fname">Username</label><br>
+                            <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
+                        
+                            </form>
+                        </form>
+                        <form class="dadosform" id="meusinteresses" style="display:none;">
+                          <label for="fname">A definir</label><br>
+                          <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
+                        </form>    
+                      </div>
+                    </section>
+                    
+                  </section>                
+                </div>              
               </div>
               
-              <section>
-                <form class="navbarform">    
-                    <a onclick="mostraDados()" class="w3-bar-item w3-button"><i class="fas fa-address-book" aria-hidden="true"></i>  Os meus dados  </a>
-                    <a onclick="mostraEmail()" class="w3-bar-item w3-button"><i class="fas fa-at" aria-hidden="true"></i> E-mail </a>
-                    <a onclick="mostraInteresses()" class="w3-bar-item w3-button"><i class="fas fa-heartbeat" aria-hidden="true"></i>  Interesses  </a>
-                </form>
-                <form class="dadosform" id="meusDados" style="display:block;">
-
-                  <img class="minhafoto" src="images/perfilricardo.png" height="150" width="130" alt="Image preview...">
-                  <input type="file" onchange="seletorDeImagem()"><br><br>         
-
-                  <label for="fname">Nome</label><br>
-                  <input type="textform" id="nome" style="width:755px; background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
-              
-                  <label for="lname">Data de Nascimento</label><br>
-                  <input type="textform" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
-               
-                  <label for="lname">Morada</label><br>
-                  <input type="textform" id="endereco" style="width:755px; background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
-            
-                  <label for="lname">Codigo Postal</label><br>
-                  <input type="textform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
-                  
-                  <input type="textform" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
-                </form>
-
-                <form class="dadosform" id="useremail" style="display:none;">
-                    <label for="fname">Username</label><br>
-                    <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
-                
-                     </form>
-              </form>
-              <form class="dadosform" id="meusinteresses" style="display:none;">
-                  <label for="fname">A definir</label><br>
-                  <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
-              
-              </form>
-
               <script>
+              function w3_open() {
+                var x = document.getElementById("mySidebar");
+                if(x.style.display === "none")
+                {
+                    document.getElementById("page").style.marginLeft = "15%";
+                    x.style.width = "15%";
+                    x.style.display = "block";
+                    
+                }
+                else {
+                    document.getElementById("page").style.marginLeft = "0%";
+                    x.style.display = "none";
+                    document.getElementById("openNav").style.display = "inline-block";
+                }
+                
+               
+              }
+              
+              
               function w3_open() {
                 var x = document.getElementById("mySidebar");
                 if(x.style.display === "none")

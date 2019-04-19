@@ -115,6 +115,7 @@ button, input {overflow: visible;}
 
 .search-input-wrapper {margin: 0 1rem 0 0;overflow: hidden;float: right;width: 300px;-webkit-transition: width .5s ease,left .5s ease;-o-transition: width .5s ease,left .5s ease;transition: width .5s ease,left .5s ease;}
 .search-input-wrapper>form>input {margin: 0;}
+.ml-dados{margin-left: 10%!important}
 
 
 /*Viewport, ajuste da página conforme o tamanho da janela*/
@@ -175,6 +176,10 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 .card-title {margin-bottom: .75rem;}
 .card-text:last-child {margin-bottom: 0;}
 #region-main.has-blocks {display: inline-block;width: calc(100% - 475px);}
+
+/*Container dados pessoais*/
+.large {width: 100%}
+#region-maindados.has-blocks {display: inline-block; width: calc(80% - 100px);}
 
 /*Vista das Disciplinas*/
 .container-fluid {width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
