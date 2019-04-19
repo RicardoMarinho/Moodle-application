@@ -60,6 +60,9 @@
   background: #ddd;
   color: black;
 }
+
+input[type=textform], select {padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
+
 </style>
 
 <body>
@@ -67,13 +70,13 @@
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
       <div class="w3-bar-padd">
         <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
-        <a href="dashboardDadosPessoais.html" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
+        <a href="#" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
-        <a href="dashboardDisciplinas.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-graduation-cap fa-fw" aria-hidden="true"></i>As minhas disciplinas</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw" aria-hidden="true"></i>Os meus ficheiros</a>
+        <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="fas fa-lock" aria-hidden="true"></i> Sair</a>
       </div>
     </div>
     <div id="page">
@@ -118,33 +121,33 @@
                 </form>
                 <form class="dadosform" id="meusDados" style="display:block;">
 
-                  <img class="minhafoto" src="images/perfilricardo.png" height="150" width="130" alt="Image preview..."><br><br>
+                  <img class="minhafoto" src="images/perfilricardo.png" height="150" width="130" alt="Image preview...">
                   <input type="file" onchange="seletorDeImagem()"><br><br>         
 
                   <label for="fname">Nome</label><br>
-                  <input type="text" id="nome" style="width:755px; background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
+                  <input type="textform" id="nome" style="width:755px; background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
               
                   <label for="lname">Data de Nascimento</label><br>
-                  <input type="text" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
+                  <input type="textform" id="dataNasc" style="width:150px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" ><br>      
                
                   <label for="lname">Morada</label><br>
-                  <input type="text" id="endereco" style="width:755px; background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
+                  <input type="textform" id="endereco" style="width:755px; background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
             
                   <label for="lname">Codigo Postal</label><br>
-                  <input type="text" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
+                  <input type="textform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
                   
-                  <input type="text" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
+                  <input type="textform" id="endereco" style="width:300px; background-color: #EFF2FB" name="lastname" placeholder="Localidade..."><br>
                 </form>
 
                 <form class="dadosform" id="useremail" style="display:none;">
                     <label for="fname">Username</label><br>
-                    <input type="text" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
+                    <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="username" placeholder="Username.."><br>
                 
                      </form>
               </form>
               <form class="dadosform" id="meusinteresses" style="display:none;">
-                  <label for="fname">A defenir</label><br>
-                  <input type="text" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A defenir.."> <br>
+                  <label for="fname">A definir</label><br>
+                  <input type="textform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
               
               </form>
 
