@@ -12,17 +12,17 @@
     <script src="assets/js/funcoes.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Dashboard</title>
+    <title>Calendário</title>
 </head>
 
 <body>
   
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none"id="mySidebar">
       <div class="w3-bar-padd">
-        <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
+        <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
         <a href="dashboardDadosPessoais.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
-        <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
-        <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
+        <a href="calendario.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
+        <a href="#" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
         <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw" aria-hidden="true"></i>Os meus ficheiros</a>
@@ -67,7 +67,7 @@
                                         <div role="main">
                                           <div data-region="calendar" class="maincalendar">
                                             <div class="heightcontainer">
-                                              <h2>Calendar</h2>
+                                              <h2>Calendário</h2>
                                               <div>
                                               <div class="calendarwrapper">
                                               <div class="controls">
@@ -75,354 +75,213 @@
                                                       <a href="#" class="arrow_link previous" title="Previous month">
                                                           <i class="icon fa fa-arrow-left fa-fw" aria-hidden="true"></i>
                                                           &nbsp;
-                                                          <span class="arrow_text">March 2019</span>
+                                                          <span class="arrow_text">Março 2019</span>
                                                       </a>
-                                                      <h2 class="current">April 2019</h2>
+                                                      <span class="hide"> | </span>
+                                                      <h2 class="current">Abril 2019</h2>
+                                                      <span class="hide"> | </span>
                                                       <a href="#" class="arrow_link next" title="Next month">
-                                                          <span class="arrow_text">May 2019</span>
+                                                          <span class="arrow_text">Maio 2019</span>
                                                           &nbsp;
                                                           <i class="icon fa fa-arrow-right fa-fw" aria-hidden="true"></i>
                                                       </a>
                                                   </div>
                                               </div>
-                                              <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
-                                                  <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
-                                              </span>
                                               <table class="calendarmonth calendartable m-b-0">
                                                   <thead>
                                                       <tr>
                                                           <th class="header text-xs-center">
-                                                              Sun
+                                                              Domingo
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Mon
+                                                              Segunda
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Tue
+                                                              Terça
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Wed
+                                                              Quarta
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Thu
+                                                              Quinta
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Fri
+                                                              Sexta
                                                           </th>
                                                           <th class="header text-xs-center">
-                                                              Sat
+                                                              Sábado
                                                           </th>
                                                       </tr>
                                                   </thead>
                                                   <tbody>
                                                       <tr data-region="month-view-week">
                                                               <td class="dayblank">&nbsp;</td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554073200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554132935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554073200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554132935">
+                                                                  <div class=" pt-3 text-md-center">
                                                                           1
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              1
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554159600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554219335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554159600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554219335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           2
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              2
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554246000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554305735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554246000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554305735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           3
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              3
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554332400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554392135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554332400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554392135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           4
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              4
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554418800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554478535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554418800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554478535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           5
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              5
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1554505200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554564935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1554505200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554564935">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           6
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              6
-                                                                          </div>
-                                                                  </div>
                                                               </td>
                                                       </tr>
                                                       <tr data-region="month-view-week">
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1554591600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554651335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1554591600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554651335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           7
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              7
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554678000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554737735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554678000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554737735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           8
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              8
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554764400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554824135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554764400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554824135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           9
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              9
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554850800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554910535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554850800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554910535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           10
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              10
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1554937200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554996935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1554937200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1554996935">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           11
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              11
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555023600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555083335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555023600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555083335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           12
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              12
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1555110000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555169735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1555110000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555169735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           13
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              13
-                                                                          </div>
-                                                                  </div>
                                                               </td>
                                                       </tr>
                                                       <tr data-region="month-view-week">
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1555196400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555256135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1555196400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555256135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           14
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              14
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555282800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555342535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555282800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555342535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           15
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              15
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555369200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555428935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555369200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555428935">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           16
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              16
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555455600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555515335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555455600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555515335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           17
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              17
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555542000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555601735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555542000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555601735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           18
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              18
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555628400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555688135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555628400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555688135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           19
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              19
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left today weekend clickable" data-day-timestamp="1555714800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555774535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left today weekend " data-day-timestamp="1555714800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555774535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           20
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              20
-                                                                          </div>
-                                                                  </div>
                                                               </td>
                                                       </tr>
                                                       <tr data-region="month-view-week">
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1555801200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555860935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1555801200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555860935">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           21
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              21
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555887600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555947335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555887600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1555947335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           22
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              22
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1555974000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556033735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1555974000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556033735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           23
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              23
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1556060400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556120135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1556060400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556120135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           24
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              24
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1556146800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556206535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1556146800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556206535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           25
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              25
-                                                                          </div>
+                                                                  <div class="day-content text-md-left">
+                                                                    <ul class="pl-3">
+                                                                      <li>
+                                                                        <a href="#" title="Trabalho HTML5 TI">                               
+                                                                          <img class="icon " src="images/assigment.svg" alt="" title="">
+                                                                          <span class="xs-size text-muted">Trabalho HTML5 TI</span>
+                                                                        </a>
+                                                                      </li>
+                                                                    </ul>
                                                                   </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1556233200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556292935">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1556233200" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556292935">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           26
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              26
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1556319600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556379335">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend" data-day-timestamp="1556319600" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556379335">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           27
-                                                                  </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              27
-                                                                          </div>
                                                                   </div>
                                                               </td>
                                                       </tr>
                                                       <tr data-region="month-view-week">
-                                                              <td class="day text-sm-center text-md-left weekend clickable" data-day-timestamp="1556406000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556465735">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left weekend " data-day-timestamp="1556406000" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556465735">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           28
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              28
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1556492400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556552135">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1556492400" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556552135">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           29
                                                                   </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              29
-                                                                          </div>
-                                                                  </div>
                                                               </td>
-                                                              <td class="day text-sm-center text-md-left clickable" data-day-timestamp="1556578800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556638535">
-                                                                  <div class="d-none d-md-block hidden-phone text-xs-center">
+                                                              <td class="day text-sm-center text-md-left " data-day-timestamp="1556578800" data-drop-zone="month-view-day" data-region="day" data-new-event-timestamp="1556638535">
+                                                                  <div class="pt-3 text-xs-center">
                                                                           30
-                                                                  </div>
-                                                                  <div class="d-md-none hidden-desktop hidden-tablet">
-                                                                          <div data-region="day-content">
-                                                                              30
-                                                                          </div>
                                                                   </div>
                                                               </td>
                                                               <td class="dayblank">&nbsp;</td>

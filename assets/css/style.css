@@ -61,6 +61,7 @@ button, input {overflow: visible;}
 .mr-1 {margin-right: .25rem!important;}
 .m-b-1{margin-bottom: 1rem!important;}
 .m-b-0{margin-bottom: 0!important;}
+.m-0{margin: 0!important;}
 .mr-auto{margin-right: auto!important;}
 .m-t-2{margin-top: 2rem!important;}
 .d-inline-block {display: inline-block!important;}
@@ -68,11 +69,12 @@ button, input {overflow: visible;}
 .align-items-center {align-items: center!important;}
 .align-content-center {align-content: center!important;}
 .p-3 {padding: 1rem!important;}
-.m-t-1, .m-y-1 {margin-top: 1rem!important;}
-.mt-3, .my-3 {margin-top: 1rem!important;}
+.m-t-1{margin-top: 1rem!important;}
+.mt-3 {margin-top: 1rem!important;}
 .flex-wrap {flex-wrap: wrap!important;}
-.pb-3, .py-3 {padding-bottom: 1rem!important;}
-.pt-3, .py-3 {padding-top: 1rem!important;}
+.pb-3 {padding-bottom: 1rem!important;}
+.pt-3 {padding-top: 1rem!important;}
+.pl-3 {padding-left: 0.5rem!important}
 .p-3 {padding: 1rem!important;}
 .p-0{padding: 0!important;}
 .pr-1, .px-1 {padding-right: .25rem!important;}
@@ -82,6 +84,8 @@ button, input {overflow: visible;}
 .bg-gray {background-color: #e9ecef!important;}
 .bg-white {background-color: #fff!important;}
 .border, .filemanager-container, .filepicker-filelist {border: 1px solid #dee2e6!important;}
+.xs-size{font-size: 9pt!important}
+
 /*Botão para abrir/fechar barra lateral*/
 [data-action=toggle-drawer] .icon {margin: 0;}
 .btn-light {color: #212529;background-color: #f8f9fa;border-color: #f8f9fa;}
@@ -123,6 +127,8 @@ button, input {overflow: visible;}
 
 
 /*Viewport, ajuste da página conforme o tamanho da janela*/
+@media (min-width: 768px){.text-md-left {text-align: left!important;}}
+@media (min-width: 576px){.text-sm-center {text-align: center!important;}}
 @media (min-width: 576px){.card-deck {flex-flow: row wrap;margin-right: -.25rem;}}
 @media (min-width: 1236px){body.drawer-open-left #region-main.has-blocks .dashboard-card-deck .dashboard-card {width: calc(50% - .5rem);}}
 @media (min-width: 1200px){.container {max-width: 1140px;}}
@@ -233,20 +239,20 @@ a{background-color:transparent;-webkit-text-decoration-skip:objects}
 .block .calendar_filters li .icon {vertical-align: initial;margin: 0 .1rem 0 .4rem;}
 .maincalendar {vertical-align: top;padding: 0;}
 .maincalendar .heightcontainer {height: 100%;position: relative;}
-.calendar-controls .current {display: block;float: left;}
+.calendar-controls .previous, .calendar-controls .next, .calendar-controls .current {display: block;float: left;}
 .calendarwrapper {position: relative;}
 .maincalendar .controls {width: 98%;margin: 10px auto;}
-.maincalendar .calendar-controls .previous{width: 30%;}
+.maincalendar .calendar-controls .previous, .maincalendar .calendar-controls .next{width: 30%;}
 .calendar-controls .previous {text-align: left;border: 1px solid transparent;}
-.maincalendar .calendar-controls .current, .current {width: 39.95%;}
-h2, .h2, .maincalendar .calendar-controls .current {font-size: 1.875rem;}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {margin-bottom: .5rem;font-family: inherit;line-height: 1.2;}
-.maincalendar .calendar-controls .previous, .path-calendar .maincalendar .calendar-controls .next {width: 30%;}
+.maincalendar .calendar-controls .current {width: 39.95%;}
+.maincalendar .calendar-controls .current {font-size: 1.875rem;}
+.maincalendar .calendar-controls .current, .h3, .h4, .h5, .h6 {margin-bottom: .5rem;font-family: inherit;line-height: 1.2;}
 .calendar-controls .next {text-align: right; border: 1px solid transparent;}
-.hidden {display: none;}
-.overlay-icon-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(255,255,255,.6);}
+.calendar-controls .current {text-align: center;margin-right: 0!important}
 .maincalendar .calendarmonth {width: 98%;margin: 10px auto;}
 .maincalendar .calendarmonth th {border: 1px dotted #dee2e6;}
 .calendartable th, .calendartable td {width: 14%;vertical-align: top;text-align: center;}
 .calendarmonth td {height: 5em;}
-.maincalendar .calendartable td {padding: 0 4px 4px 4px;}
+.maincalendar .calendartable td {padding: 0 4px 4px 4px;border: 1px dotted #dee2e6;}
+.maincalendar .calendarmonth ul li {list-style-type: none;}
+span.hide {display: none;}
