@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/funcoes.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Dashboard</title>
@@ -149,77 +150,6 @@
                   </section>                
                 </div>              
               </div>
-              
-              <script>
-              function w3_open() {
-                var x = document.getElementById("mySidebar");
-                if(x.style.display === "none")
-                {
-                    document.getElementById("page").style.marginLeft = "15%";
-                    x.style.width = "15%";
-                    x.style.display = "block";
-                    
-                }
-                else {
-                    document.getElementById("page").style.marginLeft = "0%";
-                    x.style.display = "none";
-                    document.getElementById("openNav").style.display = "inline-block";
-                }
-                
-               
-              }
-              
-              
-              function w3_open() {
-                var x = document.getElementById("mySidebar");
-                if(x.style.display === "none")
-                {
-                    document.getElementById("page").style.marginLeft = "15%";
-                    x.style.width = "15%";
-                    x.style.display = "block";
-                    
-                }
-                else {
-                    document.getElementById("page").style.marginLeft = "0%";
-                    x.style.display = "none";
-                    document.getElementById("openNav").style.display = "inline-block";
-                }               
-              }
-              
-              function mostraDados() {
-                document.getElementById("meusDados").style.display = "block";
-                document.getElementById("useremail").style.display = "none";
-                document.getElementById("meusinteresses").style.display = "none";
-              }
-              function mostraEmail() {
-                document.getElementById("meusDados").style.display = "none";
-                document.getElementById("useremail").style.display = "block";
-                document.getElementById("meusinteresses").style.display = "none";
-              }
-              function mostraInteresses() {
-                document.getElementById("meusDados").style.display = "none";
-                document.getElementById("useremail").style.display = "none";
-                document.getElementById("meusinteresses").style.display = "block";
-              }
-            
-              //seletor de imagem
-              function seletorDeImagem(){
-              var preview = document.querySelector(".minhafoto"); 
-              var file    = document.querySelector('input[type=file]').files[0]; 
-              var reader  = new FileReader();
-
-              reader.onloadend = function () {
-                  preview.src = reader.result;
-              }
-
-              if (file) {
-                  reader.readAsDataURL(file); 
-              } else {
-                  preview.src = "";
-              }
-              }
-
-              </script>
               <script src="https://use.fontawesome.com/00df0b3ac0.js"></script>
 </body>
 
