@@ -272,3 +272,6 @@ no-overflow {overflow: auto;}
 .notInf {color: #333;font-size: 0.8em;line-height: 1em;font-weight: 400;text-transform: uppercase;padding: 10px 0;border-top: 1px #ddd solid; border-bottom: 1px #ddd solid;margin-bottom: 10px;font-family: 'Roboto Condensed',sans-serif;}
 hr {border-bottom: 1px #ddd;margin-top: 50px;margin-bottom: 50px;}
 .center {display: block;margin-left: auto;margin-right: auto;height: 350px;width: 100%;}
+
+/*Ficheiros*/
+#div_tree {font: 10px Verdana, sans-serif;display: inline-block;width: 300px;}
