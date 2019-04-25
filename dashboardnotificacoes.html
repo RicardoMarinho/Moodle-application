@@ -36,6 +36,10 @@ tr:nth-child(even) {
   background-color: #f8f7f7;
 }
 
+.assunto {
+  width: 60%;
+}
+
 </style>
 
 <body>
@@ -105,30 +109,30 @@ tr:nth-child(even) {
             <table class="notificacoes">
               <tr>
                 <th>Nome</th>
-                <th>Assunto</th>
+                <th class="assunto">Assunto</th>
                 <th>Data</th>
                 <th>Estado</th>
                 <th></th>
               </tr>
               <tr>
                   <td>Pedro Gomes</td>
-                  <td>Novo Moodle ISTEC</td>
+                  <td class="assunto">Novo Moodle ISTEC</td>
                   <td>26/04/2019 18:30</td>
-                  <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido"></td>
+                  <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido"> Não Lido</td>
                   <td> <a href="#" >Ver</a></td>
                 </tr>
                 <tr>
                     <td>Ricardo Baptista</td>
-                    <td>Enunciado do projeto final</td>
+                    <td class="assunto">Enunciado do projeto final</td>
                     <td>16/04/2019 00:52</td>
-                    <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido" checked></td>
+                    <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido" checked> Lido</td>
                     <td> <a href="#" >Ver</a></td>
                 </tr>
                 <tr>
                     <td>Paulo Monteiro</td>
-                    <td>Data prevista para MiniTeste</td>
+                    <td class="assunto">Data prevista para MiniTeste</td>
                     <td>26/03/2019 21:20</td>
-                    <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido" checked></td>
+                    <td><input type="checkbox" name="estado" value="valida" title="Lido/Nao Lido" checked> Lido</td>
                     <td><a href="#" >Ver</a></td>
                 </tr>
 
