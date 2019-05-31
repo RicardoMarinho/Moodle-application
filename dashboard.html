@@ -7,11 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Ricardo Braz e Pedro Gomes" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="assets/js/funcoes.js"></script>
   <link rel="stylesheet" href="assets\css\style.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Dashboard</title>
@@ -29,10 +27,10 @@
           aria-hidden="true"></i>Noticias</a>
       <a href="calendario.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw"
           aria-hidden="true"></i>Calendário</a>
-      <a href="dashboardtimeline.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw"
-          aria-hidden="true"></i>Cronograma do curso</a>
-      <a href="dashboardnotificacoes.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw"
-          aria-hidden="true"></i>Notificações</a>
+      <a href="dashboardtimeline.html" class="w3-bar-item w3-button w3-bar-border"><i
+          class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
+      <a href="dashboardnotificacoes.html" class="w3-bar-item w3-button w3-bar-border"><i
+          class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
       <a href="ficheiros.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw"
           aria-hidden="true"></i>Os meus ficheiros</a>
       <a href="index.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fas fa-lock fa-fw"
@@ -88,6 +86,11 @@
                         <i class="icon fa fa-filter fa-fw " aria-hidden="true"></i>
                         <span class="d-sm-inline-block">Tudo</span>
                       </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tudo</a></li>
+                        <li><a class="dropdown-item" href="#">1º Ano</a></li>
+                        <li><a class="dropdown-item" href="#">2º Ano</a></li>
+                      </ul>
                     </div>
                     <div class="m-b-1 mr-1 d-flex align-items-center">
                       <div class="d-none d-md-inline-block mr-1">Ordenar por</div>
@@ -319,6 +322,9 @@
     </div>
 
   </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="https://use.fontawesome.com/00df0b3ac0.js"></script>
 </body>
 
