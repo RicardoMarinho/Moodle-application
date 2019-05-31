@@ -9,7 +9,6 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
   <script src="assets/js/funcoes.js"></script>
   <link rel="stylesheet" href="assets\css\style.css" />
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Dashboard</title>
@@ -82,22 +81,29 @@
                 <div class="block-myoverview block-cards">
                   <div class="d-flex align-items-center flex-wrap">
                     <div class="dropdown m-b-1 mr-auto">
-                      <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                         <i class="icon fa fa-filter fa-fw " aria-hidden="true"></i>
                         <span class="d-sm-inline-block">Tudo</span>
                       </button>
                       <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Tudo</a></li>
-                        <li><a class="dropdown-item" href="#">1º Ano</a></li>
-                        <li><a class="dropdown-item" href="#">2º Ano</a></li>
+                        <li><a class="dropdown-item active" href="#">1º Ano</a></li>
+                        <li><a class="dropdown-item disable" href="#">2º Ano</a></li>
+                        <li><a class="dropdown-item disable" href="#">3º Ano</a></li>
                       </ul>
                     </div>
                     <div class="m-b-1 mr-1 d-flex align-items-center">
                       <div class="d-none d-md-inline-block mr-1">Ordenar por</div>
                       <div class="dropdown">
-                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="d-sm-inline-block">Curso</span>
                         </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Tudo</a></li>
+                          <li><a class="dropdown-item active" href="#">Licenciatura de Informatica</a></li>
+                          <li><a class="dropdown-item disable" href="#">Engenharia Multimedia</a></li>
+                        </ul>
                       </div>
                     </div>
                     <div class="dropdown m-b-1">
@@ -321,10 +327,10 @@
       </section>
     </div>
 
-  </div>
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </div>  
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>  
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/00df0b3ac0.js"></script>
 </body>
 
