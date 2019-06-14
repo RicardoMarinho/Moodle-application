@@ -19,7 +19,7 @@
     </nav>
     <section class="Login">
         <section class="Form">
-            <form class="menulogin" action="\login.php" method="POST">
+            <form class="menulogin" action="login.php" method="POST">
                 <br>
                 <p><img src="images/simbolologin.png" title="Benvindo"></p>
                 <input type="text" id="fname" class="menuindex" name="utilizador" placeholder="Utilizador"> <br>

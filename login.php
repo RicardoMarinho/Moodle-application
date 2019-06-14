@@ -6,35 +6,31 @@ session_start();
 if (!empty($_POST)) {
 
     // estabelecer ligação com a base de dados
-    $conn = new PDO("mysql:dbname=nome;host=localhost", "root", "");
-    if ($conn->connect_error) {
-        echo "Erro: " . $conn->connect_error;
-    }
+    $dsn = 'mysql:dbname=moodle;host=127.0.0.1';
+    $user = 'root';
+    $password = '';
 
+    try {
+        $conn = new PDO($dsn, $user, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo 'Connection failed: ' . $e->getMessage();
+    }
     // receber o pedido de login com segurança
     $username = $_POST['utilizador'];
     $password = $_POST['password'];
 
     // verificar o utilizador em questão (pretendemos obter uma única linha de registos)
-    $stmt = $conn->prepare("SELECT u.nome FROM t_utilizador JOIN t_login ON u.id=l.utilizador_fk WHERE username = :LOGIN AND password = :PASSWORD");
-    $stmt->bindParam(":LOGIN", $username);
-    $stmt->bindParam(":PASSWORD", $password);
-    $stmt ->execute();
-    $rows=mysqli_num_rows($stmt);
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    if ($rows == 1) {
-        // o utilizador está correctamente validado
-        // guardamos as suas informações numa sessão
-        foreach ($results as $value) {
-            # code...
-            $_SESSION['utilizador']=$value['nome'];
-        }
-       
-        header("Location: dashboard.php");
+    $stmt = $conn->prepare("SELECT u.nome, l.id FROM t_utilizador as u JOIN 
+    t_login as l ON u.id=l.utilizador_fk WHERE l.username=? AND l.password=?");
+    $stmt->execute(array($username, $password));
+    $row = $stmt->fetch(PDO::FETCH_BOTH);
+    if ($row) {
+        session_start();
+        $_SESSION['utilizador'] = $row['nome'];
+        $_SESSION['userID'] = $row['id'];
+        header('Location:dashboard.php');
     } else {
-
-        // falhou o login
-        echo "<p>Utilizador ou password invalidos. <a href=\"ex1.php\">Tente novamente</a></p>";
+        $message = "Username/Password is wrong";
     }
 }
