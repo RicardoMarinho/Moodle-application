@@ -12,9 +12,10 @@ if (isset($_SESSION['utilizador'])) {
     <meta name="author" content="Ricardo Braz e Pedro Gomes" />
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
     <script src="assets/js/funcoes.js"></script>
-    <!--<link rel="stylesheet" href="assets\css\style.css" /> -->
-    <link rel="stylesheet" href="" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\css\style.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
     <title>O meu Perfil</title>
   </head>
 
@@ -116,21 +117,8 @@ if (isset($_SESSION['utilizador'])) {
                 <a onclick="mostraDados()" class="w3-bar-item w3-button"><i class="fas fa-address-book" aria-hidden="true"></i> Os meus dados </a>
                 <a onclick="mostraEmail()" class="w3-bar-item w3-button"><i class="fas fa-at" aria-hidden="true"></i>
                   Dados Login </a>
-                <a onclick="mostraInteresses()" class="w3-bar-item w3-button"><i class="fas fa-heartbeat" aria-hidden="true"></i> Interesses </a>
+                <a onclick="mostraInteresses()" class="w3-bar-item w3-button"><i class="fas fa-heartbeat" aria-hidden="true"></i> Foto de Perfil </a>
               </form>
-              <img class="minhafoto" src="images/perfil/perfilricardo.png" height="150" width="130" alt="Image preview...">
-              <form class="md-form" action="upload.php">
-                <div class="file-field">
-                  <div class="btn btn-primary btn-sm float-left">
-                    <span>Choose file</span>
-                    <input type="file">
-                  </div>
-                  <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Upload your file">
-                  </div>
-                </div>
-              </form>
-
               <?php
               include('db_connect.php');
               $stmt = $conn->prepare("SELECT u.nome, u.dtNasc, m.endereco, c.codigo FROM
@@ -168,12 +156,8 @@ if (isset($_SESSION['utilizador'])) {
                 <input type="submit">
 
               </form>
-
-              <form class="dadosform" class="boxform" id="meusinteresses" style="display:none;">
-                <label for="fname">A definir</label><br>
-                <input type="textform" class="boxform" id="user" style="width:250px; background-color: #EFF2FB" name="Adefenir" placeholder="A definir.."> <br>
+              <form class="md-form" id="meusinteresses" action="upload.php" style="display:none;">
               </form>
-            </div>
           </section>
 
         </section>
@@ -182,6 +166,7 @@ if (isset($_SESSION['utilizador'])) {
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/mdbootstrap/js/mdb.min.css"></script>
     <script src="https://use.fontawesome.com/00df0b3ac0.js"></script>
   </body>
 

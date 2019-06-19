@@ -13,24 +13,15 @@ if (isset($_SESSION['utilizador'])) {
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
     <script src="assets/js/funcoes.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <title>Moodle</title>
   </head>
 
   <body>
 
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-      <div class="w3-bar-padd">
-        <a href="dashboard.php" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
-        <a href="dashboardDadosPessoais.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
-        <a href="noticias.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
-        <a href="calendario.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
-        <a href="dashboardtimeline.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
-        <a href="dashboardnotificacoes.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
-        <a href="ficheiros.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw" aria-hidden="true"></i>Os meus ficheiros</a>
-        <a href="logout.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fas fa-lock fa-fw" aria-hidden="true"></i>Sair</a>
-      </div>
-    </div>
+    <?php
+      include('templates/sidebar.html');
+    ?>
     <div id="page">
       <header id="page-header" class="row">
         <div class="col-12 pt-3 pb-3"></div>

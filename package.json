@@ -1,25 +1,34 @@
 {
-  "name": "projeto",
+  "name": "projetotifasehtml",
   "version": "1.0.0",
-  "description": "php",
+  "description": "Projeto de php",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "exit"
+    "url": "git+https://github.com/RicardoMarinho/ProjetoTIFaseHTML.git"
   },
-  "author": "",
+  "keywords": [
+    "moodle"
+  ],
+  "author": "Ricardo Braz e Pedro Gomes",
   "license": "ISC",
-  "keywords": []
+  "bugs": {
+    "url": "https://github.com/RicardoMarinho/ProjetoTIFaseHTML/issues"
+  },
+  "homepage": "https://github.com/RicardoMarinho/ProjetoTIFaseHTML#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "mdbootstrap": "^4.8.2",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  }
 }
