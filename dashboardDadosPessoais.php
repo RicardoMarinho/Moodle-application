@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['utilizador'])) {
+  include('templates/head.html');
+  include('templates/sidebar.html');
+  include('templates/navbar.php');
   ?>
   <!DOCTYPE HTML>
   <html>
@@ -64,18 +67,6 @@ if (isset($_SESSION['utilizador'])) {
 
   <body>
 
-    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-      <div class="w3-bar-padd">
-        <a href="dashboard.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-tachometer fa-fw" aria-hidden="true"></i>Painel de utilizador</a>
-        <a href="dashboardDadosPessoais.php" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
-        <a href="noticias.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw" aria-hidden="true"></i>Noticias</a>
-        <a href="calendario.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
-        <a href="dashboardtimeline.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw" aria-hidden="true"></i>Cronograma do curso</a>
-        <a href="dashboardnotificacoes.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw" aria-hidden="true"></i>Notificações</a>
-        <a href="ficheiros.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw" aria-hidden="true"></i>Os meus ficheiros</a>
-        <a href="logout.php" class="w3-bar-item w3-button w3-bar-border"><i class="icon fas fa-lock fa-fw" aria-hidden="true"></i>Sair</a>
-      </div>
-    </div>
     <div id="page">
       <header id="page-header" class="row">
         <div class="col-12 pt-3 pb-3"></div>
@@ -121,9 +112,8 @@ if (isset($_SESSION['utilizador'])) {
               </form>
               <?php
               include('db_connect.php');
-              $stmt = $conn->prepare("SELECT u.nome, u.dtNasc, m.endereco, c.codigo FROM
-                t_utilizador as u JOIN t_morada as m ON u.morada_fk=m.id JOIN t_cp as c ON c.id=m.codigo_fk
-                WHERE u.id=?");
+              $stmt = $conn->prepare("SELECT u.nome, u.dtNasc, m.endereco, cp.codigo, ct.telemovel, ct.telemovel2, ct.telefone, ct.email 
+              FROM t_utilizador as u JOIN t_morada as m ON u.morada_fk=m.id JOIN t_cp as cp ON cp.id=m.codigo_fk JOIN t_contactos as ct ON ct.id=u.id WHERE u.id=?");
               $stmt->execute(array($_SESSION['userID']));
               $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
               foreach ($results as $row) ?>
@@ -135,28 +125,47 @@ if (isset($_SESSION['utilizador'])) {
                 <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>"><br>
 
                 <label for="lname">Morada</label><br>
-                <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="lastname" placeholder="Morada..."><br>
+                <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="endereco" placeholder="Morada..."><br>
 
                 <label for="lname">Codigo Postal</label><br>
-                <input type="textform" value="<?php echo $row['codigo']; ?>" class="boxform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}">
+                <input type="textform" value="<?php echo $row['codigo']; ?>" class="boxform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}"><br>
+
+                <label for="fname">Telemóvel</label><br>
+                <input type="tel" value="<?php echo $row['telemovel']; ?>" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telemovel" placeholder="Telemóvel.." pattern="[0-9]{9}" required><br>
+
+                <label for="fname">Telemóvel</label><br>
+                <input type="tel" value="<?php echo $row['telemovel2']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telemovel2" placeholder="Telemóvel 2.."><br>
+
+                <label for="fname">Telemóvel</label><br>
+                <input type="tel" value="<?php echo $row['telefone']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telefone" placeholder="Telefone.."><br>
+
+                <label for="fname">Endereço Electónico</label><br>
+                <input type="email" value="<?php echo $row['email']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="emailadress" placeholder="Email.."><br><br>
+
+                <input type="submit" value="Atualizar dados">
+
+
               </form>
               <?
 
               ?>
               <form action="/action_page.php" class="dadosform" id="useremail" style="display:none;">
-                <label for="fname">Username</label><br>
-                <input type="textform" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="username" placeholder="Username.."><br><br>
+                <label for="fname">Palavra Passe atual</label><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatual" placeholder="Username.."><br><br>
 
-                <label for="fname">Palavra Passe</label><br>
-                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="username" placeholder="Password.."><br><br>
+                <label for="fname">Nova Palavra Passe</label><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatualnova" placeholder="Password.."><br><br>
 
-                <label for="fname">Endereço Electónico</label><br>
-                <input type="email" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="Emailadress" placeholder="Email.."><br><br>
-
-                <input type="submit">
+                <label for="fname">Verificação Palavra Passe</label><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatualvalidacao" placeholder="Password.."><br><br>
+                
+                <input type="submit" value="Atualizar palavra passe">
 
               </form>
               <form class="md-form" id="meusinteresses" action="upload.php" style="display:none;">
+
+                <img class="minhafoto" src="images/perfil/perfilricardo.png" height="150" width="130" alt="Image preview...">
+                <input type="file" onchange="seletorDeImagem()"><br><br>   
               </form>
           </section>
 
