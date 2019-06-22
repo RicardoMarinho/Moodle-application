@@ -25,6 +25,11 @@ if (isset($_SESSION['utilizador'])) {
   <style>
     /*dashboar formulario de dados*/
 
+    .fixo {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
     .navbarform {
       top: 5px;
       position: relative;
@@ -37,7 +42,6 @@ if (isset($_SESSION['utilizador'])) {
       overflow: hidden;
       background-color: #83A3DB;
     }
-
     .navbarform a {
       float: left;
       display: block;
@@ -48,12 +52,10 @@ if (isset($_SESSION['utilizador'])) {
       text-decoration: none;
       font-size: 20px;
     }
-
     .navbarform a:hover {
       background: #ddd;
       color: black;
     }
-
     .boxform,
     select {
       padding: 12px 20px;
@@ -63,6 +65,7 @@ if (isset($_SESSION['utilizador'])) {
       border-radius: 4px;
       box-sizing: border-box;
     }
+
   </style>
 
   <body>
@@ -117,37 +120,46 @@ if (isset($_SESSION['utilizador'])) {
               $stmt->execute(array($_SESSION['userID']));
               $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
               foreach ($results as $row) ?>
-              <form class="dadosform" id="meusDados" style="display:block;" method="post" enctype="multipart/form-data">
+
+                <br>
+                <form class="fixo">           
                 <label for="fname">Nome</label><br>
-                <input type="textform" value="<?php echo $row['nome']; ?>" id="nome" class="boxform large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..."><br>
+                <input type="textform" value="<?php echo $row['nome']; ?>" id="nome" class="boxform large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..." readonly><br>
 
-                <label for="lname">Data de Nascimento</label><br>
-                <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>"><br>
+                <label for="fname">Data de Nascimento</label><br>
+                <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>" readonly><br>                
+                </form>
 
-                <label for="lname">Morada</label><br>
-                <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="endereco" placeholder="Morada..."><br>
+                <br>
 
-                <label for="lname">Codigo Postal</label><br>
-                <input type="textform" value="<?php echo $row['codigo']; ?>" class="boxform" id="endereco" style="background-color: #EFF2FB" name="lastname" placeholder="Código Postal..." required pattern="\d{4}-\d{3}"><br>
+                <form class="dadosform" id="meusDados" style="display:block;" method="post" enctype="multipart/form-data" action="updatedadospessoais.php"> 
+                <label for="fname">Morada</label><br>
+                <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="endereco" placeholder="Morada..." ><br>
 
+                <label for="fname">Codigo Postal</label><br>
+                <input type="textform" value="<?php echo $row['codigo']; ?>" class="boxform" id="endereco" style="width:200px; background-color: #EFF2FB" name="codigopostal" placeholder="Código Postal..." required pattern="\d{4}-\d{3}"><br>
+                <table style="width:100%">
+                <tr>
+                <td>
                 <label for="fname">Telemóvel</label><br>
-                <input type="tel" value="<?php echo $row['telemovel']; ?>" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telemovel" placeholder="Telemóvel.." pattern="[0-9]{9}" required><br>
-
-                <label for="fname">Telemóvel</label><br>
-                <input type="tel" value="<?php echo $row['telemovel2']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telemovel2" placeholder="Telemóvel 2.."><br>
-
-                <label for="fname">Telemóvel</label><br>
-                <input type="tel" value="<?php echo $row['telefone']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="telefone" placeholder="Telefone.."><br>
-
+                <input type="tel" value="<?php echo $row['telemovel']; ?>" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telemovel" placeholder="Telemóvel.." pattern="[0-9]{9}" required><br>
+                </td>
+                <td>
+                <label for="fname">Telemóvel 2</label><br>
+                <input type="tel" value="<?php echo $row['telemovel2']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telemovel2" placeholder="Telemóvel 2.."><br>
+                </td>
+                <td>
+                <label for="fname">Telefone</label><br>
+                <input type="tel" value="<?php echo $row['telefone']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telefone" placeholder="Telefone.."><br>
+                </td>
+                </table>
                 <label for="fname">Endereço Electónico</label><br>
-                <input type="email" value="<?php echo $row['email']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="emailadress" placeholder="Email.."><br><br>
+                <input type="email" value="<?php echo $row['email']; ?>" class="boxform" id="user" style="width:500px; background-color: #EFF2FB" name="email" placeholder="Email.."><br><br>
 
-                <input type="submit" value="Atualizar dados">
-
+                <input type="submit" name="atualiza" value="Atualizar">          
 
               </form>
               <?
-
               ?>
               <form action="/action_page.php" class="dadosform" id="useremail" style="display:none;">
                 <label for="fname">Palavra Passe atual</label><br>
@@ -160,7 +172,6 @@ if (isset($_SESSION['utilizador'])) {
                 <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatualvalidacao" placeholder="Password.."><br><br>
                 
                 <input type="submit" value="Atualizar palavra passe">
-
               </form>
               <form class="md-form" id="meusinteresses" action="upload.php" style="display:none;">
 
