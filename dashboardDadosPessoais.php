@@ -25,11 +25,6 @@ if (isset($_SESSION['utilizador'])) {
   <style>
     /*dashboar formulario de dados*/
 
-    .fixo {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
     .navbarform {
       top: 5px;
       position: relative;
@@ -121,18 +116,14 @@ if (isset($_SESSION['utilizador'])) {
               $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
               foreach ($results as $row) ?>
 
-                <br>
-                <form class="fixo">           
+                <form class="dadosform" id="meusDados" style="display:block;" method="post" enctype="multipart/form-data" action="updatedadospessoais.php"> 
+   
                 <label for="fname">Nome</label><br>
                 <input type="textform" value="<?php echo $row['nome']; ?>" id="nome" class="boxform large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..." readonly><br>
 
                 <label for="fname">Data de Nascimento</label><br>
                 <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>" readonly><br>                
-                </form>
 
-                <br>
-
-                <form class="dadosform" id="meusDados" style="display:block;" method="post" enctype="multipart/form-data" action="updatedadospessoais.php"> 
                 <label for="fname">Morada</label><br>
                 <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="endereco" placeholder="Morada..." ><br>
 
