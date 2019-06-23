@@ -60,6 +60,25 @@ if (isset($_SESSION['utilizador'])) {
       border-radius: 4px;
       box-sizing: border-box;
     }
+   
+   /* Texto entre painel */
+
+    hr.style-four {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    }
+    hr.style-four:after {
+    content: "Dados Alteráveis";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+    }
 
   </style>
 
@@ -117,13 +136,15 @@ if (isset($_SESSION['utilizador'])) {
               foreach ($results as $row) ?>
 
                 <form class="dadosform" id="meusDados" style="display:block;" method="post" enctype="multipart/form-data" action="updatedadospessoais.php"> 
-   
+                <br>
                 <label for="fname">Nome</label><br>
-                <input type="textform" value="<?php echo $row['nome']; ?>" id="nome" class="boxform large" style="background-color: #EFF2FB" name="firstname" placeholder="Meu nome..." readonly><br>
+                <input type="textform" value="<?php echo $row['nome']; ?>" id="nome" class="boxform large" name="firstname" placeholder="Meu nome..." readonly><br>               
 
                 <label for="fname">Data de Nascimento</label><br>
-                <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; background-color: #EFF2FB" name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>" readonly><br>                
-
+                <input type="date" value="<?php echo $row['dtNasc']; ?>" class="boxform" id="dataNasc" style="width:200px; name="dataNascimento" placeholder="dd/mm/aaaa" value="<? php ?>" readonly><br>                
+                <br>   
+                <hr class="style-four">
+                <br>   
                 <label for="fname">Morada</label><br>
                 <input type="textform" value="<?php echo $row['endereco']; ?>" id="endereco" class="boxform large" style="background-color: #EFF2FB" name="endereco" placeholder="Morada..." ><br>
 
@@ -133,15 +154,15 @@ if (isset($_SESSION['utilizador'])) {
                 <tr>
                 <td>
                 <label for="fname">Telemóvel</label><br>
-                <input type="tel" value="<?php echo $row['telemovel']; ?>" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telemovel" placeholder="Telemóvel.." pattern="[0-9]{9}" required><br>
+                <input type="tel" value="<?php echo $row['telemovel']; ?>" class="boxform" id="telemovel" style="width:200px; background-color: #EFF2FB" name="telemovel" placeholder="Telemóvel.." pattern="[0-9]{9}" required><br>
                 </td>
                 <td>
                 <label for="fname">Telemóvel 2</label><br>
-                <input type="tel" value="<?php echo $row['telemovel2']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telemovel2" placeholder="Telemóvel 2.."><br>
+                <input type="tel" value="<?php echo $row['telemovel2']; ?>" pattern="[0-9]{9}" class="boxform" id="telemovel2" style="width:200px; background-color: #EFF2FB" name="telemovel2" placeholder="Telemóvel 2.."><br>
                 </td>
                 <td>
                 <label for="fname">Telefone</label><br>
-                <input type="tel" value="<?php echo $row['telefone']; ?>" pattern="[0-9]{9}" class="boxform" id="user" style="width:200px; background-color: #EFF2FB" name="telefone" placeholder="Telefone.."><br>
+                <input type="tel" value="<?php echo $row['telefone']; ?>" pattern="[0-9]{9}" class="boxform" id="telefone" style="width:200px; background-color: #EFF2FB" name="telefone" placeholder="Telefone.."><br>
                 </td>
                 </table>
                 <label for="fname">Endereço Electónico</label><br>
@@ -150,22 +171,23 @@ if (isset($_SESSION['utilizador'])) {
                 <input type="submit" name="atualiza" value="Atualizar">          
 
               </form>
-              <?
-              ?>
-              <form action="/action_page.php" class="dadosform" id="useremail" style="display:none;">
+
+
+              <form class="dadosform" id="useremail" style="display:none;" method="post" enctype="multipart/form-data"  action="updatepalavra.php">
                 <label for="fname">Palavra Passe atual</label><br>
-                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatual" placeholder="Username.."><br><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="pwdatual" placeholder="Palavra Passe Atual.."><br><br>
 
                 <label for="fname">Nova Palavra Passe</label><br>
-                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatualnova" placeholder="Password.."><br><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="pwdnova" placeholder="Nova Password.."><br><br>
 
                 <label for="fname">Verificação Palavra Passe</label><br>
-                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="palavrapasseatualvalidacao" placeholder="Password.."><br><br>
+                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="pwdnova2" placeholder="ValidarPassword.."><br><br>
                 
                 <input type="submit" value="Atualizar palavra passe">
               </form>
-              <form class="md-form" id="meusinteresses" action="upload.php" style="display:none;">
 
+
+              <form class="md-form" id="meusinteresses" action="upload.php" style="display:none;">
                 <img class="minhafoto" src="images/perfil/perfilricardo.png" height="150" width="130" alt="Image preview...">
                 <input type="file" onchange="seletorDeImagem()"><br><br>   
               </form>
