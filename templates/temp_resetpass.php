@@ -1,7 +1,7 @@
 <div class="container">
     <div class="card card-container">
         <div class="text-center">
-            <h3><i class="fa fa-lock fa-4x"></i></h3>
+            <h3 class="dif"><i class="fa fa-lock fa-4x"></i></h3>
             <h2 class="text-center">Forgot Password?</h2>
             <p>You can reset your password here.</p>
             <div class="panel-body">
