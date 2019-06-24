@@ -13,16 +13,17 @@ if (isset($_SESSION['utilizador'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ricardo Braz e Pedro Gomes" />
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="images/simbolologin.png" />
     <script src="assets/js/funcoes.js"></script>
     <link rel="stylesheet" href="assets\css\style.css" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/login_template.css">
     <title>O meu Perfil</title>
   </head>
 
-  <style>
+ <style>
     /*dashboar formulario de dados*/
 
     .navbarform {
