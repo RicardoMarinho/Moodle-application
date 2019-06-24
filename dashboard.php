@@ -1,14 +1,15 @@
 <?php
 session_start();
 if (isset($_SESSION['utilizador'])) {
-?>
+  include('templates/sidebar.html');
+  include('templates/navbar.php');
+  ?>
   <!DOCTYPE HTML>
   <html>
 
   <head>
     <meta http-equiv="content-type" content="text/html" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Ricardo Braz e Pedro Gomes" />
     <link rel="shortcut icon" type="image/png" href="images/simbolologin.png" />
     <script src="assets/js/funcoes.js"></script>

@@ -160,9 +160,6 @@ if (isset($_SESSION['utilizador'])) {
 
 
               <form class="dadosform" id="useremail" style="display:none;" method="post" enctype="multipart/form-data"  action="updatepalavra.php">
-                <label for="fname">Palavra Passe atual</label><br>
-                <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="pwdatual" placeholder="Palavra Passe Atual.."><br><br>
-
                 <label for="fname">Nova Palavra Passe</label><br>
                 <input type="password" class="boxform" id="user" style="width:300px; background-color: #EFF2FB" name="pwdnova" placeholder="Nova Password.."><br><br>
 
