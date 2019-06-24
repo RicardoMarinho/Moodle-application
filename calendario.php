@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (isset($_SESSION['utilizador'])) {
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -19,25 +23,10 @@
 
 <body>
 
-  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-    <div class="w3-bar-padd">
-      <a href="dashboard.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-tachometer fa-fw"
-          aria-hidden="true"></i>Painel de utilizador</a>
-      <a href="dashboardDadosPessoais.html" class="w3-bar-item w3-button w3-bar-border"><i
-          class="icon fa fa-user-circle-o fa-fw" aria-hidden="true"></i>Os meus dados</a>
-      <a href="noticias.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-newspaper-o fa-fw"
-          aria-hidden="true"></i>Noticias</a>
-      <a href="calendario.html" class="w3-bar-item w3-button w3-bar-border w3-bar-active"><i
-          class="icon fa fa-calendar fa-fw" aria-hidden="true"></i>Calendário</a>
-      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-area-chart fa-fw"
-          aria-hidden="true"></i>Cronograma do curso</a>
-      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-bell-o fa-fw"
-          aria-hidden="true"></i>Notificações</a>
-      <a href="#" class="w3-bar-item w3-button w3-bar-border"><i class="icon fa fa-folder-o fa-fw"
-          aria-hidden="true"></i>Os meus ficheiros</a>
-      <a href="index.html" class="w3-bar-item w3-button w3-bar-border"><i class="icon fas fa-lock fa-fw"
-          aria-hidden="true"></i>Sair</a>
-    </div>
+<?php
+      include('templates/sidebar.html');
+    ?>
+
   </div>
   <div id="page">
     <header id="page-header" class="row">
@@ -70,9 +59,8 @@
             </form>
           </div>
         </div>
-        <li class="d-flex align-items-center username"><span><strong>Ricardo Braz</strong></span></li>
-        <li class="d-flex align-items-center"><span class="avatar current"><img src="images/perfilricardo.png"
-              class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
+        <li class="d-flex align-items-center username"><span><strong><?php echo $_SESSION['utilizador']; ?></strong></span></li>
+          <li class="d-flex align-items-center"><span class="avatar current"><img src="images/perfil/simbolologin.png" class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
       </ul>
     </div>
     <div id="region-main-box" class="col-12">
@@ -415,3 +403,6 @@
 </body>
 
 </html>
+<?php
+} else header("Location: index.php");
+?>

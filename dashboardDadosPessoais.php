@@ -8,21 +8,6 @@ if (isset($_SESSION['utilizador'])) {
   <!DOCTYPE HTML>
   <html>
 
-  <head>
-    <meta http-equiv="content-type" content="text/html" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Ricardo Braz e Pedro Gomes" />
-    <link rel="shortcut icon" type="image/png" href="images/simbolologin.png" />
-    <script src="assets/js/funcoes.js"></script>
-    <link rel="stylesheet" href="assets\css\style.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
-    <link rel="stylesheet" href="assets/css/login_template.css">
-    <title>O meu Perfil</title>
-  </head>
-
  <style>
     /*dashboar formulario de dados*/
 
@@ -114,8 +99,8 @@ if (isset($_SESSION['utilizador'])) {
               </form>
             </div>
           </div>
-          <li class="d-flex align-items-center username"><span><strong>Ricardo Braz</strong></span></li>
-          <li class="d-flex align-items-center"><span class="avatar current"><img src="images/perfilricardo.png" class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
+          <li class="d-flex align-items-center username"><span><strong><?php echo $_SESSION['utilizador']; ?></strong></span></li>
+          <li class="d-flex align-items-center"><span class="avatar current"><img src="images/perfil/simbolologin.png" class="userpicture" width="50" height="50" role="presentation" aria-hidden="true"></span></li>
         </ul>
       </div>
       <div id="region-main-box" class="col-12">
